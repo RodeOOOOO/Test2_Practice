@@ -6,6 +6,12 @@ public class Person {
 
     public Person() {
     }
+	//I forget why I needed this
+	public void newDogs(Dog[] newDogs) {
+        for(Dog dog : newDogs){
+            addDog(dog);
+        }
+    }
     public void addDog(Dog d) {
         if (numDogs < 20) {
             dogs[numDogs] = d;
@@ -21,11 +27,7 @@ public class Person {
             }
         }
     }
-    public void newDogs(Dog[] newDogs) {
-        for(Dog dog : newDogs){
-            addDog(dog);
-        }
-    }
+    
     public int getNumDogs() {
         return numDogs;
     }

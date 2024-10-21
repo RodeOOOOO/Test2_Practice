@@ -17,7 +17,7 @@ public class Person {
     public void addDogs(Dog[] dogs) {
         for (Dog dog : dogs) {
             if (dog != null) {
-                addDog(dog);  // Reusing the existing addDog() method
+                addDog(dog);
             }
         }
     }

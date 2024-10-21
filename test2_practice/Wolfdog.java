@@ -7,6 +7,9 @@ public class Wolfdog extends Dog {
         super(name, weight);
         this.toughness = toughness;
     }
+    public Wolfdog(String name, double weight) {
+        this(name, weight, 1);
+    }
     public int getToughness() {
         return toughness;
     }

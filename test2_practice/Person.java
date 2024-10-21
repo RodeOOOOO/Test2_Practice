@@ -6,12 +6,6 @@ public class Person {
 
     public Person() {
     }
-	//I forget why I needed this
-	public void newDogs(Dog[] newDogs) {
-        for(Dog dog : newDogs){
-            addDog(dog);
-        }
-    }
     public void addDog(Dog d) {
         if (numDogs < 20) {
             dogs[numDogs] = d;
@@ -23,11 +17,15 @@ public class Person {
     public void addDogs(Dog[] dogs) {
         for (Dog dog : dogs) {
             if (dog != null) {
-                addDog(dog);
+                addDog(dog);  // Reusing the existing addDog() method
             }
         }
     }
-    
+    public void newDogs(Dog[] newDogs) {
+        for(Dog dog : newDogs){
+            addDog(dog);
+        }
+    }
     public int getNumDogs() {
         return numDogs;
     }
@@ -51,12 +49,19 @@ public class Person {
         }
         return null;
     }
-    public void remDog(int i) {
-        if (i >= 0 && i < numDogs && dogs[i] != null) {
-            dogs[i] = null;
-            numDogs--;
-        }   
-    } 
+    public Dog remDog(Dog d) {
+        for (int i = 0; i < numDogs; i++) {
+            if (dogs[i] == d) {
+                for (int j = i; j < numDogs - 1; j++) {
+                    dogs[j] = dogs[j + 1];
+                }
+                dogs[numDogs - 1] = null;
+                numDogs--;
+                return d;
+            }
+        }
+        return null;
+    }       
     public double totalDogPower() {
         double totalPower = 0.0;
         for (Dog dog : dogs) {

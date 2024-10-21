@@ -7,12 +7,19 @@ public class Person {
     public Person() {
     }
     public void addDog(Dog d) {
-        if(numDogs<20) {
+        if (numDogs < 20) {
             dogs[numDogs] = d;
             numDogs++;
         } else {
-			System.out.println("Dogs array is full");
-		}
+            System.out.println("Dogs array is full");
+        }
+    }
+    public void addDogs(Dog[] dogs) {
+        for (Dog dog : dogs) {
+            if (dog != null) {
+                addDog(dog);  // Reusing the existing addDog() method
+            }
+        }
     }
     public void newDogs(Dog[] newDogs) {
         for(Dog dog : newDogs){

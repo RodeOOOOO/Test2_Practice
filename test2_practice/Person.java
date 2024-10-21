@@ -10,7 +10,9 @@ public class Person {
         if(numDogs<20) {
             dogs[numDogs] = d;
             numDogs++;
-        }
+        } else {
+			System.out.println("Dogs array is full");
+		}
     }
     public void newDogs(Dog[] newDogs) {
         for(Dog dog : newDogs){

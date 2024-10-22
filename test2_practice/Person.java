@@ -84,16 +84,16 @@ public class Person {
             return 0.0;
         }
     }
-    public int totalWolfDogToughness() {
-        int totalToughness = 0;
-        for (Dog dog : dogs) {
-            if (dog instanceof Wolfdog) {
-                Wolfdog Wolfdog = (Wolfdog) dog;
-                totalToughness += Wolfdog.getToughness();
-            }
+public int totalWolfDogToughness() {
+    int totalToughness = 0;
+    for (Dog dog : dogs) {
+        if (dog instanceof Wolfdog wolfdog) {
+            totalToughness += wolfdog.getToughness();
         }
-        return totalToughness;
     }
+    return totalToughness;
+}
+
     public Dog leastWeightDog() {
         if (numDogs == 0) {
             return null;

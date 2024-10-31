@@ -1,0 +1,40 @@
+ArrayList Methods in Java
+
+add(obj)
+Adds the specified object to the end of the ArrayList.
+
+add(index, obj)
+Inserts the specified object at the specified index in the ArrayList.
+
+addAll(anotherList)
+Adds all the elements in the specified collection to the end of the ArrayList.
+
+clear()
+Removes all elements from the ArrayList, making it empty.
+
+contains(obj)
+Returns true if the ArrayList contains the specified object.
+
+get(index)
+Returns the element at the specified position in the ArrayList.
+
+indexOf(obj)
+Returns the index of the first occurrence of the specified object in the ArrayList. Returns -1 if not found.
+
+isEmpty()
+Returns true if the ArrayList has no elements.
+
+remove(index)
+Removes the element at the specified index from the ArrayList.
+
+remove(obj)
+Removes the first occurrence of the specified object from the ArrayList, if present.
+
+set(index, obj)
+Replaces the element at the specified index with the specified object.
+
+size()
+Returns the number of elements in the ArrayList.
+
+ArrayList<>(anotherList)
+Creates a new ArrayList containing all the elements of the specified collection.
